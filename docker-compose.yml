@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+    matrix-backend-pmla:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - 8000:8000
+        networks:
+            - app-pmla
+
+networks:
+    app-pmla:
+        driver: bridge
+    app-cpa:
+        driver: bridge
